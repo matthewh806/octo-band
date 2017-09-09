@@ -1,5 +1,5 @@
-var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update });
-var notes = ["C2", "D4", "E5", "A6"];
+var game = new Phaser.Game(900, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update });
+var notes = ["C2", "D4", "E5", "A6", "G1", "B3"];
 
 function preload () {
     game.load.atlasXML('octopus', 'assets/sprites/octopus.png', 'assets/sprites/octopus.xml');
@@ -9,8 +9,17 @@ function create () {
     // Underwater background color
     game.stage.backgroundColor = '#1873CE';
 
-    for(var i=0; i < notes.length; i++) {
-        createOctoSynth(200 * (i), 200, notes[Math.floor(Math.random() * notes.length)]);
+    var count = notes.length;
+    var columns = 3;
+    var rows = count / columns
+
+    console.log(columns);
+    console.log(rows);
+
+    for(var i=0; i < rows; i++) {
+        for(var j = 0; j < columns; j++) {
+            createOctoSynth(200 * j, 200 * (i+1), notes[Math.floor(Math.random() * notes.length)]);
+        }
     }
 }
 
