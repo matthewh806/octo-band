@@ -5,17 +5,17 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     concat: {
       options: {
-        separator: ";"
+        separator: ';',
       },
       dist: {
-        src:['game/src/**/*.js'],
+        src: ['game/src/**/*.js'],
         dest: 'dist/<%= pkg.name %>.js'
       }
     },
     uglify: {
       options: {
-        // the banner is inserted at the top of the output
-        banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+        banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n',
+        preserveComments: false
       },
       dist: {
         files: {
@@ -31,8 +31,8 @@ module.exports = function(grunt) {
         flatten: true,
         filter: 'isFile',
         src: [
-          './phaser-ce/build/phaser.min.js',
-          './tone/build/tone.min.js' 
+          './phaser-ce/build/phaser.js',
+          './tone/build/tone.js' 
         ]
       }
     }

@@ -1,5 +1,5 @@
 var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update });
-var notes = ["C2", "D4", "E5", "A6"]
+var notes = ["C2", "D4", "E5", "A6"];
 
 function preload () {
     game.load.atlasXML('octopus', 'assets/sprites/octopus.png', 'assets/sprites/octopus.xml');
