@@ -1,6 +1,14 @@
 var game = new Phaser.Game(900, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update });
 var notes = ["C2", "D4", "E5", "A6", "G1", "B3"];
 
+// TODO: Separate into separate classses
+// TODO: Define classes for the different sea creatures
+// TODO: Animate in the octopuses
+// TODO: Better spawning of octopuses
+// TODO: Better control over synths
+// TODO: Put notes etc into constants class
+// TODO: Different octopus assets - different sizes, colors etc
+
 function preload () {
     game.load.atlasXML('octopus', 'assets/sprites/octopus.png', 'assets/sprites/octopus.xml');
 }
