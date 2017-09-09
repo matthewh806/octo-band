@@ -1,0 +1,21 @@
+{
+  "name": "octopus-band",
+  "version": "1.0.0",
+  "description": "",
+  "main": "game/src/main.js",
+  "dependencies": {
+    "phaser-ce": "^2.8.5",
+    "tone": "^0.10.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-uglify": "^3.0.1",
+    "grunt-contrib-copy": "^1.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
