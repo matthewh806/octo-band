@@ -22,25 +22,10 @@ module.exports = function(grunt) {
           'dist/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
         }
       }
-    },
-    copy: {
-      js: {
-        expand: true,
-        cwd: './node_modules',
-        dest: './game/src/libs/',
-        flatten: true,
-        filter: 'isFile',
-        src: [
-          './phaser-ce/build/phaser.js',
-          './tone/build/tone.js' 
-        ]
-      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-copy');
-
-  grunt.registerTask('default', ['copy', 'concat', 'uglify']);
 };

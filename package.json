@@ -5,6 +5,7 @@
   "main": "game/src/main.js",
   "dependencies": {
     "phaser-ce": "^2.8.5",
+    "requirejs": "^2.3.5",
     "tone": "^0.10.0"
   },
   "devDependencies": {
